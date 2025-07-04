@@ -1,38 +1,12 @@
-# HeladeriaFront
+# React + Vite
 
-# 🛠️ Proyecto Grupal
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🎯 Objetivo General
+Currently, two official plugins are available:
 
-Desarrollar una **nueva funcionalidad completa (CRUD)** para una aplicación existente, utilizando **React** como frontend y **ASP.NET Web API (C#)** como backend.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Deberan agregar una **nueva entidad**, tanto en la base del backend ya existente como en la interfaz visual. También pueden optar por desarrollar desde cero su propio backend y/o frontend utilizando las tecnologías que prefieran.
+## Expanding the ESLint configuration
 
----
-
-## 🧩 Descripción del Trabajo
-
-### Parte 2: Frontend
-
-- El frontend debe estar desarrollado en **React**.
-- Es conveniente que el frontend se desarrolle en Vite.
-- Debe permitir:
-  - Visualizar una lista de la nueva entidad.
-  - Crear, editar, eliminar y ver en detalle elementos.
-  - Realizar validaciones de formulario y mostrar errores amigables.
-- Debe incluir:
-  - Hooks (`useState`, `useEffect`, etc.).
-  - Ruteo con Wouter.
-  - Comunicación con la API (`fetch` o `axios`).
-  - Diseño responsive y amigable.
-
-📌 _También pueden optar por usar otra tecnología de frontend moderna si lo desean._
-
-## 📁 Requisitos Mínimos
-
-- CRUD completo funcionando en ambos extremos.
-- Persistencia de datos real.
-- Interfaz funcional y clara.
-- Código estructurado y organizado.
-
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
