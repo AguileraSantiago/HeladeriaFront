@@ -28,3 +28,11 @@ Deberan agregar una **nueva entidad**, tanto en la base del backend ya existente
 
 📌 _También pueden optar por usar otra tecnología de frontend moderna si lo desean._
 
+---
+
+## 📁 Requisitos Mínimos
+
+- CRUD completo funcionando en ambos extremos.
+- Persistencia de datos real.
+- Interfaz funcional y clara.
+- Código estructurado y organizado.
