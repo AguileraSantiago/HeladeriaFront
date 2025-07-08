@@ -1,34 +1,75 @@
-import API from "./axiosConfig";
-
-const API = axios.create({
-  baseURL: "https://localhost:7051/api",
-});
+const BASE_URL_CATEGORIAS = "https://localhost:7051/api/categorias";
 
 // Obtener todas las categorías
 export const getCategorias = async () => {
-  const res = await API.get("/categorias");
-  return res.data;
+  try {
+    const res = await fetch(BASE_URL_CATEGORIAS);
+    if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+    return await res.json();
+  } catch (error) {
+    console.error("Error al obtener las categorías:", error);
+    throw error;
+  }
 };
 
-// Obtener una categoría por ID
-export const getCategoria = async (id) => {
-  const res = await API.get(`/categorias/${id}`);
-  return res.data;
+// Obtener una categoría específica por ID
+export const getCategoriaById = async (id) => {
+  try {
+    const res = await fetch(`${BASE_URL_CATEGORIAS}/${id}`);
+    if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+    return await res.json();
+  } catch (error) {
+    console.error("Error al obtener la categoría por ID:", error);
+    throw error;
+  }
 };
 
-// Crear nueva categoría
-export const createCategoria = async (data) => {
-  const res = await API.post("/categorias", data);
-  return res.data;
+// Crear una nueva categoría
+export const createCategoria = async (categoria) => {
+  try {
+    const res = await fetch(BASE_URL_CATEGORIAS, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(categoria),
+    });
+    if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+    return await res.json();
+  } catch (error) {
+    console.error("Error al crear la categoría:", error);
+    throw error;
+  }
 };
 
-// Actualizar categoría existente
-export const updateCategoria = async (id, data) => {
-  const res = await API.put(`/categorias/${id}`, data);
-  return res.data;
+// Actualizar una categoría existente
+export const updateCategoria = async (id, categoria) => {
+  try {
+    const res = await fetch(`${BASE_URL_CATEGORIAS}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(categoria),
+    });
+    if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+    return await res.json();
+  } catch (error) {
+    console.error("Error al actualizar la categoría:", error);
+    throw error;
+  }
 };
 
-// Eliminar categoría
+// Eliminar una categoría
 export const deleteCategoria = async (id) => {
-  await API.delete(`/categorias/${id}`);
+  try {
+    const res = await fetch(`${BASE_URL_CATEGORIAS}/${id}`, {
+      method: "DELETE",
+    });
+    if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+    return await res.json();
+  } catch (error) {
+    console.error("Error al eliminar la categoría:", error);
+    throw error;
+  }
 };

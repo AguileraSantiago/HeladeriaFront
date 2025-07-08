@@ -4,7 +4,7 @@ const Nav = ()=>{
             <a href="">Logo</a>
             <div>
                 <ul> 
-                <li><a href="">Helados</a></li>
+                <li><a href="/helados">Helados</a></li>
                 <li><a href=""></a>Nosotros</li>
                 <li><a href=""></a>Contactos</li>
                 </ul>

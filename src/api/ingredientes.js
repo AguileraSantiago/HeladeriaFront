@@ -1,34 +1,75 @@
-import API from "./axiosConfig";
+const BASE_URL_INGREDIENTES = "https://localhost:7051/api/ingredientes";
 
-const API = axios.create({
-  baseURL: "https://localhost:7051/api",
-});
-
-
+// Obtener todos los ingredientes
 export const getIngredientes = async () => {
-  const res = await API.get("/ingredientes");
-  return res.data;
+  try {
+    const res = await fetch(BASE_URL_INGREDIENTES);
+    if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+    return await res.json();
+  } catch (error) {
+    console.error("Error al obtener los ingredientes:", error);
+    throw error;
+  }
 };
 
-
-export const getIngrediente = async (id) => {
-  const res = await API.get(`/ingredientes${id}`);
-  return res.data;
+// Obtener un ingrediente por ID
+export const getIngredienteById = async (id) => {
+  try {
+    const res = await fetch(`${BASE_URL_INGREDIENTES}/${id}`);
+    if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+    return await res.json();
+  } catch (error) {
+    console.error("Error al obtener el ingrediente:", error);
+    throw error;
+  }
 };
 
-
-export const createIngrediente = async (data) => {
-  const res = await API.post("/ingredientes", data);
-  return res.data;
+// Crear un nuevo ingrediente
+export const createIngrediente = async (ingrediente) => {
+  try {
+    const res = await fetch(BASE_URL_INGREDIENTES, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(ingrediente),
+    });
+    if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+    return await res.json();
+  } catch (error) {
+    console.error("Error al crear el ingrediente:", error);
+    throw error;
+  }
 };
 
-
-export const updateIngrediente = async (id, data) => {
-  const res = await API.put(`/ingredientes/${id}`, data);
-  return res.data;
+// Actualizar un ingrediente
+export const updateIngrediente = async (id, ingrediente) => {
+  try {
+    const res = await fetch(`${BASE_URL_INGREDIENTES}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(ingrediente),
+    });
+    if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+    return await res.json();
+  } catch (error) {
+    console.error("Error al actualizar el ingrediente:", error);
+    throw error;
+  }
 };
 
-
+// Eliminar un ingrediente
 export const deleteIngrediente = async (id) => {
-  await API.delete(`/ingredientes/${id}`);
+  try {
+    const res = await fetch(`${BASE_URL_INGREDIENTES}/${id}`, {
+      method: "DELETE",
+    });
+    if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+    return await res.json();
+  } catch (error) {
+    console.error("Error al eliminar el ingrediente:", error);
+    throw error;
+  }
 };
