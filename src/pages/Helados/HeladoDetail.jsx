@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "wouter";
-import { fetchHeladoById } from "../../api/helados"; // Ajustá la ruta según tu estructura
+import { fetchHeladoById } from "../../api/helados"; 
 
 const HeladoDetail = () => {
   const [helado, setHelado] = useState(null);

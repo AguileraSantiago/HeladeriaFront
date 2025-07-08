@@ -1,7 +1,6 @@
-const BASE_URL = "https://localhost:7051/api/helados"; // Reemplazá TU_IP_LOCAL por tu IP real
+const BASE_URL = "https://localhost:7051/api/helados"; 
 
 // Obtener todos los helados
-
 export const fetchHelados = async () => {
   try {
     const res = await fetch(BASE_URL);
