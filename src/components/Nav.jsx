@@ -10,7 +10,7 @@ const Nav = () => {
             <div>
                 <ul className="navbar-option">
                     <li><a href="/helados">Helados</a></li>
-                    <li><a href="">Nosotros</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
                     <li><a href="">Contactos</a></li>
                     <li>
                         <p>
