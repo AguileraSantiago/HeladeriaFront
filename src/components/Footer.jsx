@@ -1,5 +1,5 @@
 import '../assets/styles/footer.css'
-import Logo from '../assets/photos/logo.png';
+
 const Footer = ()=>{
     return(
     
@@ -14,9 +14,7 @@ const Footer = ()=>{
       </ul>
     </div>
 
-    <div className="logo">
-      <img src={Logo} alt="logoHeladeria"/>
-    </div>
+
 
     <div className="locations">
       <h3>UBICACIONES</h3>

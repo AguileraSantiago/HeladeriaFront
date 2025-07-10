@@ -7,6 +7,7 @@
     font-size: 1.4rem;
     color:#8D94BA;
     background-color: #fff;
+    
 }
 
 
@@ -17,11 +18,13 @@
 }
 
 .navbar-option li a{
+    font-size: 20px;
     text-decoration: none;
     color: #8D94BA;
 }
 
 .navbar-option a:hover{
+
     text-decoration: underline;
 }
 

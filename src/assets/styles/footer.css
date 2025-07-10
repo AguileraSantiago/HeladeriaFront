@@ -1,10 +1,12 @@
 footer {
     background-color: #8D94BA;
     padding: 10px;
-
+    margin-top: 30px;
+    color: #fff;
   }
   
   .footer-container {
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
@@ -14,6 +16,7 @@ footer {
   }
   
   .contact {
+    color:  #fff;
     flex: 1;
     text-align: left;
     max-height: 100px;
@@ -25,33 +28,26 @@ footer {
     max-height: 100px;
   }
 
-  .logo {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
-  .logo img {
-    width: 200px; 
-  }
   
   .contact h3, .locations h3 {
+    
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 10px;
     padding-bottom: 5px;
-    color: fff;
+    color: #fff;
   }
   
   ul {
+    color: #fff;
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
   li {
+    color: #fff;
     margin-bottom: 5px;
     font-size: 13px;
   }
@@ -63,7 +59,7 @@ footer {
   
   .contact li a{
     text-decoration: none;
-    color: black;
+    color: #fff;
   }
 
   
@@ -116,9 +112,6 @@ footer {
       font-size: 16px;
     }
   
-    .logo img {
-      width:  150px; 
-    }
   
     footer {
       padding: 15px;

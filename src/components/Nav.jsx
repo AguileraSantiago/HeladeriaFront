@@ -1,7 +1,7 @@
 import '../assets/styles/nav.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
-import Logo from '../assets/photos/logo.png';
+import Logo from '../assets/photos/TheWalkers.png';
 
 const Nav = () => {
     return (
