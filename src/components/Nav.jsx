@@ -1,19 +1,31 @@
-const Nav = ()=>{
-     return (
+import '../assets/styles/nav.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import Logo from '../assets/photos/logo.png';
+
+const Nav = () => {
+    return (
         <div className="navbar">
-            <a href="">Logo</a>
+            <a href=""><img src={Logo} alt="logo de heladeria" className='logo'/></a>
             <div>
-                <ul> 
-                <li><a href="/helados">Helados</a></li>
-                <li><a href=""></a>Nosotros</li>
-                <li><a href=""></a>Contactos</li>
+                <ul className="navbar-option">
+                    <li><a href="/helados">Helados</a></li>
+                    <li><a href="">Nosotros</a></li>
+                    <li><a href="">Contactos</a></li>
+                    <li>
+                        <p>
+                            <FontAwesomeIcon icon={faShoppingCart} /> 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <FontAwesomeIcon icon={faUser} /> 
+                        </p>
+                    </li>
                 </ul>
             </div>
-            <div>
-                <p>Carrito</p>
-                <p>User</p>
-            </div>
         </div>
-     )}
+    );
+}
 
-     export default Nav;
+export default Nav;

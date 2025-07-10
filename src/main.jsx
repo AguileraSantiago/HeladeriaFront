@@ -6,6 +6,8 @@ import Home from './pages/Home.jsx';
 import HeladoList from './pages/Helados/HeladoList.jsx';
 import FormHeladoCreate from './components/FormHeladoCreate.jsx';
 
+
+
 // El <Route> más específico (/helados/create) debe ir antes que /helados/:id, o si no, create será interpretado como un :id.
 createRoot(document.getElementById('root')).render(
   <StrictMode>
