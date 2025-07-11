@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../assets/styles/categoria.css"
 import {
     getCategorias,
     createCategoria,
@@ -63,7 +64,7 @@ const CategoriasForm = () => {
     };
 
     return (
-        <div>
+        <div className="categoriaform">
             <h2>🏷️ Categorías</h2>
             <form onSubmit={handleSubmit}>
                 <input

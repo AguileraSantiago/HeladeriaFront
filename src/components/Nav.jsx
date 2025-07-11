@@ -10,6 +10,7 @@ const Nav = () => {
             <div>
                 <ul className="navbar-option">
                     <li><a href="/helados">Helados</a></li>
+                    <li> <a href="/dashboard">DashBoard</a></li>
                     <li><a href="/#nosotros">Nosotros</a></li>
                     <li><a href="/#contacto">Contactos</a></li>
                     <li>

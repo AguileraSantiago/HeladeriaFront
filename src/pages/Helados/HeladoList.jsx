@@ -44,11 +44,11 @@ const HeladoList = () => {
           ))}
         </div>
 
-        <div className="create-button-container">
+        {/* <div className="create-button-container">
           <Link href="/helados/create" className="create-button">
             ➕ Crear nuevo helado
           </Link>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </>

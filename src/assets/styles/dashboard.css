@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .dashboard-container {
   padding: 2rem;
   max-width: 900px;
@@ -28,7 +32,7 @@ h1 {
 
 .tabs button.active,
 .tabs button:hover {
-  background-color: #ff69b4;
+  background-color: #8D94BA;
   color: white;
 }
 

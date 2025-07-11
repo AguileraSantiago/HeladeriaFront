@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../assets/styles/ingrediente.css"
 import {
   getIngredientes,
   createIngrediente,
@@ -63,7 +64,7 @@ const IngredientesForm = () => {
   };
 
   return (
-    <div>
+    <div className="ingredientes">
       <h2>🧂 Ingredientes</h2>
       <form onSubmit={handleSubmit}>
         <input

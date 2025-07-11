@@ -2,6 +2,7 @@
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  height: 70vh;
 }
 
 .title {
@@ -42,7 +43,7 @@
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background: #ff69b4;
+  background: #8D94BA;
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -50,7 +51,7 @@
 }
 
 .details-button:hover {
-  background: #e056a4;
+  background: #555970;
 }
 
 .create-button-container {
