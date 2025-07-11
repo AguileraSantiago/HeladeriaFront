@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+import Nav from "../../components/Nav.jsx";
+import Footer from "../../components/Footer.jsx";
 import { Link } from "wouter";
+import "../../assets/styles/heladoList.css"; 
 
 const HeladoList = () => {
   const [helados, setHelados] = useState([]);
@@ -21,24 +24,33 @@ const HeladoList = () => {
     fetchHelados();
   }, []);
 
-  if (loading) return <p>Cargando helados...</p>;
+  if (loading) return <p className="loading">Cargando helados...</p>;
 
   return (
     <>
-    <div>
-      <h2>Lista de Helados</h2>
-      <ol>
-        {helados.map((helado) => (
-          <li key={helado.id}>
-            {helado.nombre} -{" "}
-            <Link href={`/helados/${helado.id}`}>Ver detalles</Link>
-          </li>
-        ))}
-      </ol>
-    </div>
-    <div>
-      <Link href="/helados/create">Crear nuevo helado</Link>
-    </div>
+      <Nav />
+      <div className="helado-list-container">
+        <h2 className="title">🍦 Lista de Helados</h2>
+
+        <div className="cards-container">
+          {helados.map((helado) => (
+            <div key={helado.id} className="helado-card">
+              <h3>{helado.nombre}</h3>
+              <p>ID: {helado.id}</p>
+              <Link className="details-button" href={`/helados/${helado.id}`}>
+                Ver detalles
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <div className="create-button-container">
+          <Link href="/helados/create" className="create-button">
+            ➕ Crear nuevo helado
+          </Link>
+        </div>
+      </div>
+      <Footer />
     </>
   );
 };

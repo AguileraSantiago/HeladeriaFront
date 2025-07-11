@@ -4,7 +4,7 @@ const Footer = ()=>{
     return(
     
         <footer>
-  <div className="footer-container">
+  <div className="footer-container" id="contacto">
     <div className="contact">
       <h3>CONTACTÁ CON NOSOTROS</h3>
       <ul>

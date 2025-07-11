@@ -5,6 +5,7 @@ import HeladoDetail from './pages/Helados/HeladoDetail.jsx';
 import Home from './pages/Home.jsx';
 import HeladoList from './pages/Helados/HeladoList.jsx';
 import FormHeladoCreate from './components/FormHeladoCreate.jsx';
+import Dashboard from './pages/Dashboard/Dashboard.jsx'
 
 
 
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/helados" component={HeladoList}/>
+      <Route path="/dashboard" component={Dashboard}/>
       <Route path="/helados/create" component={FormHeladoCreate} />
       <Route path="/helados/:id" component={HeladoDetail} />
     </Switch>

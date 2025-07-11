@@ -6,12 +6,12 @@ import Logo from '../assets/photos/TheWalkers.png';
 const Nav = () => {
     return (
         <div className="navbar">
-            <a href=""><img src={Logo} alt="logo de heladeria" className='logo'/></a>
+            <a href="/"><img src={Logo} alt="logo de heladeria" className='logo'/></a>
             <div>
                 <ul className="navbar-option">
                     <li><a href="/helados">Helados</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="">Contactos</a></li>
+                    <li><a href="/#nosotros">Nosotros</a></li>
+                    <li><a href="/#contacto">Contactos</a></li>
                     <li>
                         <p>
                             <FontAwesomeIcon icon={faShoppingCart} /> 
