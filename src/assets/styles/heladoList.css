@@ -1,0 +1,123 @@
+.helado-list-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh; 
+}
+.search-bar {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4a4a4a;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.helado-card {
+  background: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.helado-card:hover {
+  transform: translateY(-5px);
+}
+
+.helado-card h3 {
+
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.details-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #8D94BA;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.details-button:hover {
+  background: #555970;
+}
+
+.create-button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.create-button {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  background: #00b894;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.create-button:hover {
+  background: #019875;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+
+.helado-img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px; 
+}
+
+.add-cart-icon {
+  cursor: pointer;
+  font-size: 1.5rem; 
+  color: #8D94BA; 
+  margin-left: 1rem; 
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.add-cart-icon:hover {
+  transform: scale(1.2);
+  color: #555970; 
+}
+
+
+
+@media (min-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

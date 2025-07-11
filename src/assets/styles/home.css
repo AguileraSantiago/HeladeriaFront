@@ -1,0 +1,146 @@
+.portada {
+  width: 100%;
+  /* min-height: 100vh; */
+  background-color: #8D94BA;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portada-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 120px;
+  padding: 3rem 5%; 
+  flex-wrap: wrap;
+}
+
+.portada-texto h1 {
+  font-family: "Lobster", sans-serif;
+  font-size: 3rem;
+  color: white;
+  max-width: 500px;
+}
+
+.portada-imagen {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portada-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+.circulo-fondo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 330px;
+  height: 330px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.nosotros{
+  margin-top: 50px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color:#8D94BA;
+}
+
+.nosotros h2{
+font-size: 50px;
+}
+
+.nosotros p {
+  font-size: 20px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.nosotros img{
+  margin-top: 30px;
+  max-width: 600px;
+  max-height: 600px;
+  object-fit: contain;
+}
+
+.nostros-texto-img{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .portada {
+    padding-top: 20px;
+  }
+
+  .portada-content {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 2rem 1rem;
+  }
+
+  .portada-texto h1 {
+    font-size: 2rem;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .portada-imagen {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+  }
+
+  .circulo-fondo {
+    width: 230px;
+    height: 230px;
+  }
+
+  .nosotros {
+    padding: 2rem 1rem;
+    margin-top: 40px;
+  }
+
+  .nosotros h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .nosotros p {
+    font-size: 1rem;
+    padding: 0 10px;
+    text-align: justify;
+  }
+
+  .nostros-texto-img {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .nostros-texto-img img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}

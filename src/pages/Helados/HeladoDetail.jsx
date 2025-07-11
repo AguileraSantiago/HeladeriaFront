@@ -1,31 +1,33 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
-
+import { useParams } from "wouter";
+import { fetchHeladoById } from "../../api/helados"; 
 
 const HeladoDetail = () => {
-    const [Helado, SetHelado] = useState([]);
-    const {id} = useParams();
+  const [helado, setHelado] = useState(null);
+  const { id } = useParams();
 
-    useEffect (()=>{ 
-        const fetchHelado = async ()=>{ 
-            try
-            {
-                const response = await fetch(`https://localhost:7051/api/helados/${id}`)
-                const data = await response.json();
-                SetHelado(data)
-            }
-            catch (error)
-            {
-                console.error("Error al carga el Helado",error)
-            }
-         }  
-         fetchHelado();
-    },[])
-    return (
-        <div> 
-            <p>{Helado.nombre}</p>
-        </div>
-    )
-} 
+  useEffect(() => {
+    const cargarHelado = async () => {
+      try {
+        const data = await fetchHeladoById(id);
+        setHelado(data);
+      } catch (error) {
+        console.error("Error al cargar el helado", error);
+      }
+    };
+
+    cargarHelado();
+  }, [id]);
+
+  if (!helado) return <p>Cargando...</p>;
+
+  return (
+    <div>
+      <p>{helado.nombreHelado}</p> 
+      <p>Precio: ${helado.precio}</p>
+      <p>Estado: {helado.nombreEstado}</p>
+    </div>
+  );
+};
 
 export default HeladoDetail;
