@@ -1,44 +1,66 @@
 body {
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
 }
 
 .dashboard-container {
-  padding: 2rem;
+  padding: 2.5rem 1rem;
   max-width: 900px;
-  margin: auto;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #4b4e6d;
 }
 
 .tabs {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
-  gap: 1rem;
+  gap: 1.2rem;
+  flex-wrap: wrap;
 }
 
 .tabs button {
-  padding: 0.8rem 1.5rem;
-  background-color: #ddd;
+  padding: 0.8rem 1.8rem;
+  background-color: #e0e2f1;
   border: none;
-  border-radius: 6px;
+  border-radius: 30px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #4b4e6d;
+  box-shadow: 0 2px 6px rgba(141, 148, 186, 0.3);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.tabs button.active,
 .tabs button:hover {
-  background-color: #8D94BA;
+  background-color: #8d94ba;
   color: white;
+  box-shadow: 0 4px 12px rgba(141, 148, 186, 0.6);
+}
+
+.tabs button.active {
+  background-color: #5c63b1;
+  color: white;
+  box-shadow: 0 6px 20px rgba(92, 99, 177, 0.7);
 }
 
 .form-section {
-  border: 1px solid #ccc;
-  padding: 1.5rem;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  border: 1px solid #d1d3e0;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #f9fafc;
+  box-shadow: inset 0 0 10px #e0e2f1;
+  font-size: 1rem;
+  line-height: 1.6;
 }

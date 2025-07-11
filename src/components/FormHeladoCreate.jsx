@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { createHelado, fetchHelados } from "../api/helados";
 import { getCategorias } from "../api/categorias";
 import { getIngredientes } from "../api/ingredientes";
-import '../assets/styles/FormHeladoCreate.css'
+import "../assets/styles/FormHeladoCreate.css";
 
 const FormHeladoCreate = () => {
   const [form, setForm] = useState({
@@ -109,7 +109,7 @@ const FormHeladoCreate = () => {
     <div className="form-container">
       <h2 className="form-title">🍨 Crear Helado</h2>
       <form onSubmit={handleSubmit} className="form">
-         <label htmlFor="">Nombre</label>
+        <label htmlFor="">Nombre</label>
         <input
           type="text"
           name="nombreHelado"
@@ -190,7 +190,9 @@ const FormHeladoCreate = () => {
       <ul className="helado-list">
         {helados.map((h) => (
           <li key={h.id} className="helado-item">
-            <strong style={{ color: "black" }}>{h.nombreHelado} – ${h.precio}</strong>
+            <strong style={{ color: "black" }}>
+              {h.nombreHelado} – ${h.precio}
+            </strong>
           </li>
         ))}
       </ul>

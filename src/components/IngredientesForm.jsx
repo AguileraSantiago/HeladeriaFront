@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../assets/styles/ingrediente.css"
+import "../assets/styles/ingrediente.css";
 import {
   getIngredientes,
   createIngrediente,
@@ -22,6 +22,7 @@ const IngredientesForm = () => {
       const data = await getIngredientes();
       setIngredientes(data);
     } catch (error) {
+      console.error(error);
       alert("Error al cargar los ingredientes");
     } finally {
       setCargando(false);
@@ -43,6 +44,7 @@ const IngredientesForm = () => {
       setEditandoId(null);
       cargarIngredientes();
     } catch (error) {
+      console.error(error);
       alert("Error al guardar el ingrediente");
     }
   };
@@ -58,6 +60,7 @@ const IngredientesForm = () => {
         await deleteIngrediente(id);
         cargarIngredientes();
       } catch (error) {
+        console.error(error);
         alert("Error al eliminar el ingrediente");
       }
     }

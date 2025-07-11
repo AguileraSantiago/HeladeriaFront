@@ -1,3 +1,113 @@
-.ingredientes{
-    height: 50vh;
+.ingredientes {
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: #fefefe;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ingredientes h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #5a5a7d;
+}
+
+.ingredientes form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ingredientes input[type="text"] {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #8d94ba;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.ingredientes input[type="text"]:focus {
+  outline: none;
+  border-color: #5c63b1;
+  box-shadow: 0 0 5px rgba(92, 99, 177, 0.5);
+}
+
+.ingredientes button[type="submit"] {
+  background-color: #8d94ba;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ingredientes button[type="submit"]:hover {
+  background-color: #5c63b1;
+}
+
+.ingredientes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.ingredientes li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f5f8;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.ingredientes li:hover {
+  background-color: #e3e6f0;
+}
+
+.ingredientes li span {
+  flex-grow: 1;
+}
+
+.ingredientes li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+  color: #8d94ba;
+  transition: color 0.3s ease;
+}
+
+.ingredientes li button:hover {
+  color: #5c63b1;
+}
+
+@media (max-width: 480px) {
+  .ingredientes {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .ingredientes form {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .ingredientes button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem 0;
+  }
 }

@@ -2,7 +2,7 @@
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 .search-bar {
   text-align: center;
@@ -26,10 +26,11 @@
 }
 
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
-  justify-items: center;
+  padding: 0 1rem;
 }
 
 .helado-card {
@@ -47,7 +48,6 @@
 }
 
 .helado-card h3 {
-
   font-size: 1.4rem;
   color: #333;
   margin-bottom: 0.5rem;
@@ -57,7 +57,7 @@
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background: #8D94BA;
+  background: #8d94ba;
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -98,23 +98,21 @@
   width: 250px;
   height: 300px;
   object-fit: cover;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 
 .add-cart-icon {
   cursor: pointer;
-  font-size: 1.5rem; 
-  color: #8D94BA; 
-  margin-left: 1rem; 
+  font-size: 1.5rem;
+  color: #8d94ba;
+  margin-left: 1rem;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .add-cart-icon:hover {
   transform: scale(1.2);
-  color: #555970; 
+  color: #555970;
 }
-
-
 
 @media (min-width: 1200px) {
   .cards-container {
