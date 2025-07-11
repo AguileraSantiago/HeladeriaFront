@@ -2,7 +2,20 @@
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  height: 70vh;
+  min-height: 100vh; 
+}
+.search-bar {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 .title {
@@ -13,10 +26,10 @@
 }
 
 .cards-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  justify-content: center;
+  justify-items: center;
 }
 
 .helado-card {
@@ -24,7 +37,7 @@
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 1.5rem;
-  width: 260px;
+  width: 300px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
@@ -34,6 +47,7 @@
 }
 
 .helado-card h3 {
+
   font-size: 1.4rem;
   color: #333;
   margin-bottom: 0.5rem;
@@ -78,4 +92,32 @@
   text-align: center;
   margin-top: 3rem;
   font-size: 1.2rem;
+}
+
+.helado-img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px; 
+}
+
+.add-cart-icon {
+  cursor: pointer;
+  font-size: 1.5rem; 
+  color: #8D94BA; 
+  margin-left: 1rem; 
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.add-cart-icon:hover {
+  transform: scale(1.2);
+  color: #555970; 
+}
+
+
+
+@media (min-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

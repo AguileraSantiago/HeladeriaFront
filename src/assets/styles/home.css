@@ -87,3 +87,60 @@ font-size: 50px;
   justify-content: space-around;
 }
 
+@media (max-width: 768px) {
+  .portada {
+    padding-top: 20px;
+  }
+
+  .portada-content {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 2rem 1rem;
+  }
+
+  .portada-texto h1 {
+    font-size: 2rem;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .portada-imagen {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+  }
+
+  .circulo-fondo {
+    width: 230px;
+    height: 230px;
+  }
+
+  .nosotros {
+    padding: 2rem 1rem;
+    margin-top: 40px;
+  }
+
+  .nosotros h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .nosotros p {
+    font-size: 1rem;
+    padding: 0 10px;
+    text-align: justify;
+  }
+
+  .nostros-texto-img {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .nostros-texto-img img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
