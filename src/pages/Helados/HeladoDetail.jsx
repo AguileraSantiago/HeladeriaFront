@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "wouter";
-import { fetchHeladoById } from "../../api/helados"; 
+import { getHeladoById } from "../../api/helados"; 
 
 const HeladoDetail = () => {
   const [helado, setHelado] = useState(null);
@@ -9,7 +9,7 @@ const HeladoDetail = () => {
   useEffect(() => {
     const cargarHelado = async () => {
       try {
-        const data = await fetchHeladoById(id);
+        const data = await getHeladoById(id);
         setHelado(data);
       } catch (error) {
         console.error("Error al cargar el helado", error);

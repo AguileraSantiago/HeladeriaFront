@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { createHelado } from "../api/helados";
 import { getCategorias } from "../api/categorias";
 import { getIngredientes } from "../api/ingredientes";
+import { getEstados } from "../api/estados";
 
 export default function FormHeladoCreate() {
   const [form, setForm] = useState({
@@ -10,11 +11,13 @@ export default function FormHeladoCreate() {
     precio: 0,
     itsArtesanal: false,
     categoriaId: "",
+    estadoId: "",
     selectedIngredientes: [] // array para múltiples selecciones
   });
 
   const [categorias, setCategorias] = useState([]);
   const [ingredientes, setIngredientes] = useState([]);
+   const [estados, setEstados] = useState([]);
 
   // Cargar selects
   useEffect(() => {
@@ -22,6 +25,7 @@ export default function FormHeladoCreate() {
       try {
         setCategorias(await getCategorias());
         setIngredientes(await getIngredientes());
+        setEstados(await getEstados());
       } catch (err) {
         console.error("Error cargando opciones del formulario", err);
       }
@@ -68,14 +72,17 @@ export default function FormHeladoCreate() {
         alert("Por favor selecciona al menos un ingrediente");
         return;
       }
-
+       if (!form.estadoId) {
+        alert("Por favor selecciona un estado");
+        return;
+      }
       const nuevoHelado = {
         nombreHelado: form.nombreHelado,
         descripcion: form.descripcion,
         precio: parseFloat(form.precio),
         itsArtesanal: form.itsArtesanal,
         categoriaId: parseInt(form.categoriaId),
-        estadoId: 1, // Estado por defecto
+        estadoId: parseInt(form.estadoId),
         ingredientesIds: form.selectedIngredientes // Envia el array de IDs
       };
 
@@ -89,6 +96,7 @@ export default function FormHeladoCreate() {
         precio: 0,
         itsArtesanal: false,
         categoriaId: "",
+        estadoId: "",
         selectedIngredientes: []
       });
     } catch (err) {
@@ -155,6 +163,23 @@ export default function FormHeladoCreate() {
           {categorias.map((cat) => (
             <option key={cat.id} value={cat.id}>
               {cat.nombreCategoria}
+            </option>
+          ))}
+        </select>
+      </div>
+
+       <div>
+        <label htmlFor="estadoId">Estado:</label>
+        <select
+          name="estadoId"
+          value={form.estadoId}
+          onChange={handleChange}
+          required
+        >
+          <option value="">Seleccione</option>
+          {estados.map((est) => (
+            <option key={est.id} value={est.id}>
+              {est.nombreEstado}
             </option>
           ))}
         </select>
