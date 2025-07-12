@@ -39,7 +39,7 @@ Deberan agregar una **nueva entidad**, tanto en la base del backend ya existente
 
 ---
 
-## FUNCIONALIDAD DE ADMINISTRADOR
+## 😎 FUNCIONALIDAD DE ADMINISTRADOR
 
 - Agregamos un formulario de inicio de sesion para administrador
 - El administrador puede hacer CRUD de todas las entidades
