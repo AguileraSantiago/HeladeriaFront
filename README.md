@@ -36,3 +36,12 @@ Deberan agregar una **nueva entidad**, tanto en la base del backend ya existente
 - Persistencia de datos real.
 - Interfaz funcional y clara.
 - Código estructurado y organizado.
+
+---
+
+## FUNCIONALIDAD DE ADMINISTRADOR
+
+- Agregamos un formulario de inicio de sesion para administrador
+- El administrador puede hacer CRUD de todas las entidades
+- Usuario: admin
+- Contraseña: admin
