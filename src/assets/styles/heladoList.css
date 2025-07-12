@@ -114,6 +114,47 @@
   color: #555970;
 }
 
+.admin-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  width: 48%;
+}
+
+.edit-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #a71d2a;
+}
+
+.delete-button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
 @media (min-width: 1200px) {
   .cards-container {
     grid-template-columns: repeat(4, 1fr);
