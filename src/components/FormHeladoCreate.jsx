@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { createHelado, fetchHelados } from "../api/helados";
 import { getCategorias } from "../api/categorias";
 import { getIngredientes } from "../api/ingredientes";
-import "../assets/styles/FormHeladoCreate.css";
+import "../assets/styles/formHeladoCreate.css";
 
 const FormHeladoCreate = () => {
   const [form, setForm] = useState({
